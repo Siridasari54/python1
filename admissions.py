@@ -33,5 +33,3 @@ def add_student():
     students.append(student.to_dict())
     write_students(students)
     print("Student added successfully!")
-    print("Test....")
-    print("Test....")
