@@ -19,9 +19,11 @@ def add_student():
                       attendance, mid1, mid2, quiz, final)
 
     students = read_students()
-    if any(int(s["Roll_No"]) == student.roll_no for s in students):
-        print("Duplicate Roll_No!")
-        return
+    for s in students:
+        if int(s["Roll_No"]) == student.roll_no:
+         print("Duplicate Roll_No!")
+         return
+
 
     valid, msg = validate_student(student.to_dict())
     if not valid:
@@ -31,3 +33,5 @@ def add_student():
     students.append(student.to_dict())
     write_students(students)
     print("Student added successfully!")
+    print("Test....")
+    print("Test....")
