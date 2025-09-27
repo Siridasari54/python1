@@ -6,10 +6,18 @@ def search_student():
     
     if choice == "1":
         roll = input("Enter Roll_No: ")
-        result = [s for s in students if s["Roll_No"] == roll]
+        result = []
+        for s in students:
+            if s["Roll_No"] == roll:
+                result.append(s)
+
     else:
         name = input("Enter Name (partial ok): ").lower()
-        result = [s for s in students if name in s["Name"].lower()]
+        result = []
+        for s in students:
+            if name in s["Name"].lower():
+                result.append(s)
+
     
     if result:
         for s in result:
