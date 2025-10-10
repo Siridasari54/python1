@@ -1,7 +1,7 @@
 # sorting_filtering.py
 from file_handler import read_students
 import csv
-
+#filter function
 def sort_filter_students():
     students = read_students()
     choice = input("Sort by (1) Marks (2) Filter by Attendance < threshold: ")
