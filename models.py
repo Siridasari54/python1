@@ -13,7 +13,7 @@ class Student:
         self.mid2 = float(mid2)
         self.quiz = float(quiz)
         self.final = float(final)
-
+    #to dict
     def to_dict(self):
         return {
             "Roll_No": self.roll_no,
